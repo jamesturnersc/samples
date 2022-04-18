@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    stream:
+      function:
+        definition: kafkaProcessor;kafkaConsumer
+        
+      bindings:
+        kafkaProcessor-out-0:
+          destination: response
+          content-type: application/x-protobuf         
+        kafkaProcessor-in-0:
+          destination: request
+          content-type: application/x-protobuf
+        kafkaConsumer-in-0:
+          destination: data
+          content-type: application/x-protobuf
+          
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-create-topics: true

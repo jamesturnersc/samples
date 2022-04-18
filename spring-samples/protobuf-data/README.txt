@@ -1,0 +1,1 @@
+Sample of defining Protobuf Messages and then using plugin to generate Java classes.

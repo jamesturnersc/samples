@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    stream:
+      function:
+        definition: kafkaDataProducer
+        
+      bindings:
+        kafkaDataProducer-out-0:
+          destination: data
+          content-type: application/x-protobuf
+          #valueSerde: io.confluent.kafka.streams.serdes.protobuf.KafkaProtobufSerde
+        kafkaRequestProducer-out-0:
+          destination: request
+          content-type: application/x-protobuf
+          #valueSerde: io.confluent.kafka.streams.serdes.protobuf.KafkaProtobufSerde
+          
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-create-topics: true

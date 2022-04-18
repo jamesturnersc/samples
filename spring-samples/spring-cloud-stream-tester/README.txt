@@ -1,0 +1,1 @@
+Sample of using Spring Cloud Stream to send Kafka messages in protobuf format.

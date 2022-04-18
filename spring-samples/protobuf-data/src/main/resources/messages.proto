@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+option java_multiple_files = true;
+option java_package = "test";
+
+message Data {
+    required string data = 1;
+}
+
+message Request {
+    required int32 id = 1;
+}
+
+message Response {
+	required int32 id = 1;
+    required string status = 2;
+}
